@@ -1,8 +1,10 @@
 import ScaleCarousel from "@/components/scalecarousel";
 import { EmblaOptionsType } from "embla-carousel";
 import Head from "next/head";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import React, { useState } from "react";
-import {  Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 export default function FAQ() {
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
@@ -33,17 +35,35 @@ export default function FAQ() {
   ];
 
   const OPTIONS: EmblaOptionsType = { loop: true }
-const SLIDE_COUNT2 = 10
-const SLIDES = Array.from(Array(SLIDE_COUNT2).keys())
+  const SLIDE_COUNT2 = 10
+  const SLIDES = Array.from(Array(SLIDE_COUNT2).keys())
   return (
     <>
       <Head>
         <title>FREQUENTLY ASKED QUESTIONS</title>
         <meta name="description" content="Frequently Asked Questions" />
       </Head>
-      <ScaleCarousel slides={SLIDES} options={OPTIONS} />
+      <Row className="mt-5 p-3">
+        <Col className="border" >
+          <div className="font-weight-bold text-center">
+            Fieldman Control System
+          </div>
+          <ScaleCarousel slides={SLIDES} options={OPTIONS} /> </Col>
+        <Col className="border" >
+          <div className="font-weight-bold text-center">
+            Fieldman Induction
+          </div>
+          <ScaleCarousel slides={SLIDES} options={OPTIONS} /> </Col>
+        <Col className="border" >
+          <div className="font-weight-bold text-center">
+            Fieldman Sensors Pvt Ltd
+          </div>
+          <ScaleCarousel slides={SLIDES} options={OPTIONS} /> </Col>
+
+      </Row>
+
       <h2 className="p-2 text-center mt-1">FREQUENTLY ASKED QUESTIONS</h2>
-      <Container  className="mb-5">
+      <Container className="mb-5">
         <div className="accordion" id="accordionExample">
           {accordionItems.map((item, index) => (
             <div key={index} className="accordion-item">

@@ -1,29 +1,27 @@
 export const images: string[] = [
-  "blackcardemon.webp",
-  "blackpepper.webp",
-  "chilly.webp", 
-  "coriander.webp",
-  "cumin.webp",
-  "Fennelseeds.webp",
-  "garlic.webp",
-  "ginger.webp",
-  "greenchilly.webp",
-  "poppyseeds.webp",
-  "saffron.webp"
+  "bearing.webp",
+  "f1.jpg",
+  "glass-epoxy-frp-sheet.webp", 
+  "frp-washers.jpg",
+  "gates-brand-carbon-free-hose.jpg",
+  "mica-washer.jpg",
+  "Inverter.jpg",
+  "Inverter-Scr.jpg",
+  "mild-steel-tie-rod-hydraulic-cylinder.jpg",
+  "pedestal-bearing.jpg"
   ];
 
   export const name: string[] = [
-    "Black Cardemon",
-    "Black Pepper",
-    "Chilly", 
-    "Coriander",
-    "Cumin",
-    "Fennel Seeds",
-    "Garlic",
-    "Ginger",
-    "Green Chilly",
-    "Poppy Seeds",
-    "Saffron"
+    "Bearing",
+    "Inverter",
+    "glass-epoxy-frp-sheet", 
+    "frp-washers",
+    "gates-brand-carbon-free-hose",
+    "mica-washer",
+    "Inverter",
+    "Inverter",
+    "mild-steel-tie-rod-hydraulic-cylinder",
+    "pedestal-bearing"
     ];
   
   const imageByIndex = (index: number): string => images[index % images.length];

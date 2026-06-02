@@ -8,6 +8,7 @@ import { IoMdMail } from 'react-icons/io';
 import { MdFiberManualRecord } from 'react-icons/md';
 import React from 'react';
 import Link from 'next/link';
+import { Col, Row } from 'react-bootstrap';
 export default function Footer() {
     return (
         <>
@@ -139,50 +140,57 @@ export default function Footer() {
             <div>
                 <footer className={`${Home.white_link} p-2`}>
                     <div className="flex">
-                        <section className="flex-content p-1">
-                            <img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" />
-                            <p className="mt-2 text-white">KDS Internationals are a new edge od spice exporter who deliveres world best spice from heart of India.
-                            We at KDS Internationals having good associations with USA, Canada, Dubai, Saudi Arabia, Australia, Germany, UK, Russia and worldwide.
-                                </p>
+                        <section className="flex-content">
+                            <Row>
+                                <Col><img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /></Col>
+                                <Col><img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /></Col>
+                            </Row>
+                            <Row>
+                                <Col><img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /></Col>
+                                <Col><img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /></Col>
+                            </Row>
+
+                            {/* <img src='../../logo.svg' alt='Loading..' className='image_logo' loading="lazy" /> */}
                         </section>
                         <section className="flex-content p-1">
                             <h3 className='text-white'>Products</h3>
                             <div className='p-0 m-0 d-flex flex-column'>
-                            <Link href="/gallery" className='small text-white '>Dried Spices</Link>
-                            <Link href="/gallery" className='small text-white'>Spicy Masalas</Link>
-                            <Link href="/gallery" className='small text-white'> Spice Seeds</Link>
-                            <Link href="/gallery" className='small text-white'>Powdered Spices</Link>
+                                <Link href="/gallery" className='small text-white '>AUTOMATION & INSTRUMENTS</Link>
+                                <Link href="/gallery" className='small text-white'>INDUCTION FURNACE & SPARES MANUFACTURING</Link>
+                                <Link href="/gallery" className='small text-white'> INDUCTION FURNACE - CCM & ROLLING MILL Equipment  </Link>
+                                <Link href="/gallery" className='small text-white'>ALL TYPES POWDER REFACTORY MANUFACTURING</Link>
+                                <Link href="/gallery" className='small text-white'>EXPORT HOUSE</Link>
                             </div>
                         </section>
                         <section className="flex-content p-1 ">
                             <h3 className='text-white'>Get in touch</h3>
                             <div className='p-0 m-0 d-flex flex-column '>
-                            <Link href="#" className='small text-white'><FaMapMarkerAlt color='orange'/> Ahmedabad , India</Link>
-                            <Link href="tel://+91 9512154200" className='small text-white'><BsFillTelephoneFill color='orange'/> +91 9512154200</Link> 
-                            <Link href="mailto:kdsinternationals@gmail.com" className='small text-white'><IoMdMail color='orange'/> jkexports0220@gmail.com</Link>
-                            <Link href="https://www.instagram.com/_jk_exports/" className='small text-white'><AiFillInstagram   color='orange'/> _jk_exports</Link>
+                                <Link href="#" className='small text-white'><FaMapMarkerAlt color='orange' /> Ahmedabad , India</Link>
+                                <Link href="tel://+91 9898997644" className='small text-white'><BsFillTelephoneFill color='orange' /> +91 98989 97644</Link>
+                                <Link href="mailto:sales.fieldman89@gmail.com" className='small text-white'><IoMdMail color='orange' /> sales.fieldman89@gmail.com</Link>
+                                {/*<Link href="https://www.instagram.com/_jk_exports/" className='small text-white'><AiFillInstagram   color='orange'/> _jk_exports</Link>
                             <Link href="https://www.facebook.com/jkexports2023" className='small text-white'><FaFacebook  color='orange'/> jkexports2023</Link>
-                            <Link href="https://www.threads.net/@_jk_exports" className='small text-white'><BsFillThreadsFill color='orange'/> _jk_exports</Link>
+                            <Link href="https://www.threads.net/@_jk_exports" className='small text-white'><BsFillThreadsFill color='orange'/> _jk_exports</Link> */}
                             </div>
-                            
+
                         </section>
                         <section className="flex-content p-1">
                             <h3 className='text-white'>Quick Links</h3>
                             <div className='p-0 m-0 d-flex flex-column'>
-                            <Link href="/" className='small text-white'><MdFiberManualRecord  color='orange'/>Home</Link>
-                            <Link href="/aboutus" className='small text-white'><MdFiberManualRecord  color='orange'/>About Us</Link>
-                            <Link href="/gallery" className='small text-white'><MdFiberManualRecord  color='orange'/>Gallery</Link>
-                            <Link href="/contactus" className='small text-white'><MdFiberManualRecord  color='orange'/>Contact</Link>
+                                <Link href="/" className='small text-white'><MdFiberManualRecord color='orange' />Home</Link>
+                                <Link href="/aboutus" className='small text-white'><MdFiberManualRecord color='orange' />About Us</Link>
+                                <Link href="/gallery" className='small text-white'><MdFiberManualRecord color='orange' />Gallery</Link>
+                                <Link href="/contactus" className='small text-white'><MdFiberManualRecord color='orange' />Contact</Link>
                             </div>
                         </section>
 
                     </div>
                     <div>
                         <section className="flex-content p-1 text-center bg text-white">
-                            <p>Copyright ©2020 All rights reserved || KDS Internationals</p>
+                            <p>Copyright ©2006 All rights reserved || Fieldman Groups Of Industries </p>
                         </section>
                     </div>
-                
+
                 </footer>
             </div>
         </>

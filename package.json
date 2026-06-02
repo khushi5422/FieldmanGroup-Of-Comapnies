@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/icons-material": "^9.0.1",
+    "@mui/material": "^9.0.1",
     "@nextui-org/accordion": "^2.0.28",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.2",
@@ -21,6 +25,7 @@
     "embla-carousel-autoplay": "^8.0.0-rc19",
     "embla-carousel-react": "^8.0.0-rc18",
     "mongodb": "^6.3.0",
+    "mui": "^0.0.1",
     "next": "14.0.3",
     "react": "^18",
     "react-bootstrap": "^2.9.1",
