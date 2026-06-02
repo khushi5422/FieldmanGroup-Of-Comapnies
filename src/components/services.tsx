@@ -16,9 +16,8 @@ export default function Services() {
                             <Card.Body className={`${styles.cbody}`}>
                                 <Card.Title className='text-center'>Quality Assurance</Card.Title>
                                 <Card.Text className={`${styles.fonn}`}>
-                                Experience the assurance of quality with our meticulously sourced and curated spices. We guarantee that each product meets the
-                                 highest industry standards, ensuring consistency and excellence in every batch. Your satisfaction is our priority, and our 
-                                 commitment to quality is unwavering.
+                                Ever since we have started up with our business we have focused on paying utmost attention towards the quality of our range which includes Furnace Selector Switch, 
+                                Induction Furnace Selector Switch, Variable Frequency, AC Drive, Rotary Encoders, Proximity Sensors and other such products.
                                 </Card.Text>
                             </Card.Body>
                         </Card >
@@ -28,11 +27,9 @@ export default function Services() {
                         data-aos-once="true">
                             <Image src="/truck.webp" width={90} height={90} alt='Image' />
                             <Card.Body className={`${styles.cbody}`}>
-                                <Card.Title className='text-center'>Bulk Ordering Made Easy</Card.Title>
+                                <Card.Title className='text-center'>Our Facility</Card.Title>
                                 <Card.Text className={`${styles.fonn}`}>
-                                Simplify your sourcing process with our seamless bulk ordering services. As your trusted wholesaler, we offer a hassle-free experience 
-                                for large quantities. Whether youre a restaurant, distributor, or retailer, our streamlined ordering system ensures efficiency, prompt 
-                                delivery, and the best value for your bulk spice needs.
+                                We have built an advanced infrastructure unit for manufacturing and developing our products as per the latest technology under one roof.
                                 </Card.Text>
                             </Card.Body>
                         </Card >
@@ -41,12 +38,11 @@ export default function Services() {
                         data-aos-duration="1000"
                         data-aos-once="true">
                             <Image src="/global.webp" width={90} height={90} alt='Image' />
-                            <Card.Body className={`${styles.cbody}`}>
-                                <Card.Title className='text-center'>Global Distribution Network</Card.Title>
+                            <Card.Body className={`${styles.cbody}`}>   
+                                <Card.Title className='text-center'>Our Team</Card.Title>
                                 <Card.Text className={`${styles.fonn}`}>
-                                Connect with a global spice partner! Our extensive distribution network enables us to serve clients worldwide. Benefit from our 
-                                efficient logistics and timely deliveries. As your reliable wholesaler, we strive to make the sourcing of premium Indian spices a 
-                                smooth and reliable experience, no matter where you are.
+                                We are really proud to have a workforce of brilliant engineers, R&D Team, Technicians, managers and other talented working staffs 
+                                who have profound knowledge and rich experience in their specialized fields which able us to climb up ladders of desirable success.
                                 </Card.Text>
                             </Card.Body>
                         </Card >

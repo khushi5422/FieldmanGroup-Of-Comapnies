@@ -116,7 +116,7 @@
 }
 
 .bg {
-  background-image: url("~/public/c1.webp");
+  background-image: url("~/public/bg_long_1.svg");
 }
 
 .parallaxContainer {
@@ -129,7 +129,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("~/public/c2.webp");
+  background-image: url("~/public/testimonial-bg.jpg");
 }
 
 .parallaxText {
@@ -146,7 +146,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("~/public/c3.webp");
+  background-image: url("~/public/testimonial-bg.jpg");
 }
 .parallaxCaaardService {
   min-height: 510px;
@@ -154,7 +154,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("~/public/c4.webp");
+  background-image: url("~/public/testimonial-bg.jpg");
 }
 
 .parallaxCard {
@@ -279,7 +279,7 @@
   left: 50%;
   font-size: xx-large;
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: cursive;
   padding: 8px;
   border-radius: 5px;

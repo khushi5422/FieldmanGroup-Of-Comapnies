@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container , NavDropdown } from 'react-bootstrap';
 import Home from '@/styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,13 +20,23 @@ const Navigationbar = () => {
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
-        <Navbar.Collapse id="navbar-nav" className="justify-content-end">
+        <Navbar.Collapse id="navbar-nav" className="justify-content-center">
           <Nav>
             <Nav.Link href="/" className="text-dark" >Home</Nav.Link>
             <Nav.Link href="/aboutus" className="text-dark">About</Nav.Link>
-            <Nav.Link href="/gallery" className="text-dark" >Gallery</Nav.Link>
+            {/* <Nav.Link href="/gallery" className="text-dark" >Gallery</Nav.Link> */}
+            <NavDropdown  className="text-dark" title="Products" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="/gallery">Induction Furnace Assembly</NavDropdown.Item>
+              <NavDropdown.Item href="/gallery">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
             <Nav.Link href="/contactus" className="text-dark" >Contact</Nav.Link>
-            <Nav.Link href="/blog" className="text-dark" >Blog</Nav.Link>
             <Nav.Link href="/faq"className="text-dark" >FAQ</Nav.Link>
           </Nav>
         </Navbar.Collapse>

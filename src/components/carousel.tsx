@@ -12,25 +12,25 @@ const satisfyfont = Satisfy({
 const NextJsCarousel = () => {
   const images = [
     {
-      src: "c1.webp",
-      heading: " Herbs And Spices ",
+      src: "Banner 1.jpg",
+      heading: " Induction Furnace Coil  ",
 
     },
     {
-      src: "c2.webp",
-      heading: "The Choice Of Chefs",
-
-
-    },
-    {
-      src: "c3.webp",
-      heading: " All Organic Spices...",
+      src: "Banner 2.jpg",
+      heading: "Induction Furnace Assembly",
 
 
     },
     {
-      src: "c4.webp",
-      heading: "We Provide Reliable & Fast Delivery",
+      src: "Banner 3.jpg",
+      heading: " Refractory Top Cast & Bottom Cast",
+
+
+    },
+    {
+      src: "Banner 4.jpg",
+      heading: "Other such products",
 
 
     }
@@ -49,7 +49,7 @@ const NextJsCarousel = () => {
   showArrows={false}
   autoPlay={true}
   infiniteLoop={true}
-  interval={1500}
+  interval={1000}
   stopOnHover={true}>
   {images.map((image, index) => (
     <div key={index} className={`override carousel-slide slide${index + 1}`}>

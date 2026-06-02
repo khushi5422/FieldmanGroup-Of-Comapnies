@@ -5,7 +5,7 @@ export default function Parallax() {
   return (
       <div className={`${styles.parallaxContainer}`}>
         <div className={`${styles.parallax} mt-3`}></div>
-        <h1 className={`${styles.parallaxText}`}>From the Vibrant Soil of India to Your Kitchen </h1>
+        <h1 className={`${styles.parallaxText}`}>Engineering the Future of Industry</h1>
       </div>
   );
 }

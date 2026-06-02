@@ -88,7 +88,7 @@ const ContactFooorm: React.FC = () => {
     <>
       <Head>
         <title>Contact Us</title>
-        <meta name="description" content="J K Exports" />
+        <meta name="description" content="Fieldman Group" />
       </Head>
       <style>
         {`
@@ -285,7 +285,7 @@ const ContactFooorm: React.FC = () => {
                     </div>
 
                     <div className="col-md-5 pe-0">
-                      <Image src="/fullspice.webp" alt=" Error Message" width={0}
+                      <Image src="/AboutCompany.jpeg" alt=" Error Message" width={0}
                         height={0}
                         sizes="100vw"
                         style={{ width: '100%', height: 'auto' }}
@@ -315,7 +315,7 @@ const ContactFooorm: React.FC = () => {
                         <div className={`${Contact.text}`}>
                           <p>
                             <span>Phone:</span>{" "}
-                            <Link href="tel://+91 " className="text-dark">+91 </Link>
+                            <Link href="tel://+91 9898997644" className="text-dark">+91 98989 97644</Link>
                           </p>
                         </div>
                       </div>
@@ -327,7 +327,7 @@ const ContactFooorm: React.FC = () => {
                         </div>
                         <div className={`${Contact.text}`}>
                           <p>
-                            <span>WhatsApp</span> <Link href="https://wa.me/91?text=Hello I want to buy spice from you" className="text-dark">+91 </Link>
+                            <span>WhatsApp</span> <Link href="https://wa.me/919898997644?text=Hello I want to Inquiry from you" className="text-dark">+91 9898997644</Link>
                           </p>
                         </div>
                       </div>
@@ -340,8 +340,8 @@ const ContactFooorm: React.FC = () => {
                         <div className={`${Contact.text}`}>
                           <p>
                             <span>Email:</span>{" "}
-                            <Link href="mailto:@gmail.com" className="text-dark">
-                              @gmail.com
+                            <Link href="mailto:sales.fieldman89@gmail.com" className="text-dark">
+                              sales.fieldman89@gmail.com
                             </Link>
                           </p>
                         </div>
