@@ -25,6 +25,7 @@ export default function Home() {
       </Head>
       <NextJsCarousel />
       <AboutUs />
+      
       {/* without name slider is with name */}
       <ImageCarousal />
       <ThumbnailCarousel slides={SLIDES2} options={OPTIONS2} />
