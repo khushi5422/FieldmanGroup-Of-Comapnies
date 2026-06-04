@@ -1,5 +1,15 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overscroll-behavior-y: auto;
 }
 
 a {
@@ -79,31 +89,38 @@ header {
   }
 }
 
-.custom .carousel .slide .legend {
-  position: absolute;
-  height: 60%;
-  margin-left: -15%;
-  width: 40%;
-  top: 100%;
-  border-radius: 10px;
-  background: none;
-  color: white;
+.custom,
+.custom .carousel,
+.custom .slider-wrapper,
+.custom .slider,
+.custom .slide {
+  touch-action: pan-y;
+}
+
+.custom .carousel .control-arrow {
+  width: 52px;
+}
+
+.custom .carousel .control-dots {
+  bottom: 22px;
+}
+
+.custom .carousel .control-dots .dot {
+  width: 9px;
+  height: 9px;
+  box-shadow: none;
+  opacity: 0.52;
+}
+
+.custom .carousel .control-dots .dot.selected {
   opacity: 1;
-  font-size: 12px;
-  text-align: center;
+  background: #ff1400;
 }
 
-@keyframes swipeUp {
-  from {
-    top: 100%;
+@media (max-width: 768px) {
+  .custom .carousel .control-arrow {
+    display: none;
   }
-  to {
-    top: 40%;
-  }
-}
-
-.custom .carousel .slide .legend.animated {
-  animation: swipeUp 2.5s ease-in-out forwards;
 }
 
 .embla {

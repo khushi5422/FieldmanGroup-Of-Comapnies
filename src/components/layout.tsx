@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Navigationbar from "./navbar";
 import Footer from "./footer";
+import Inquiry from "./contactForm";
 
 
 interface LayoutProps {
@@ -45,6 +46,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="articlee hideOverflowOnMobile">
           <main>{children}</main>{" "}
         </div>
+        <Inquiry />
         <div className="footeer"> <Footer /></div>
       </div>
     </>

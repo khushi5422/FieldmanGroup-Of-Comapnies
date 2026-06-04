@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useState } from "react";
+import { IoClose, IoMailOutline } from "react-icons/io5";
 // import emailjs from "@emailjs/browser";
 
 interface FormData {
@@ -86,16 +87,18 @@ const Inquiry = () => {
           .sidebar-contact {
             position: fixed;
             top: 50%;
-            left: -350px;
+            left: -380px;
             transform: translateY(-50%);
-            width: 350px;
+            width: 380px;
             height: auto;
-            padding: 40px;
+            padding: 32px;
             background: #fff;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid #e8edf2;
+            border-radius: 0 14px 14px 0;
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
             box-sizing: border-box;
-            transition: 0.5s;
-            z-index: 9;
+            transition: left 0.35s ease;
+            z-index: 1200;
           }
 
           .sidebar-contact.active {
@@ -105,53 +108,81 @@ const Inquiry = () => {
           .sidebar-contact input,
           .sidebar-contact textarea {
             width: 100%;
-            height: 36px;
-            padding: 5px;
-            margin-bottom: 10px;
+            height: 44px;
+            padding: 10px 12px;
+            margin-bottom: 12px;
             box-sizing: border-box;
-            border: 1px solid rgba(0, 0, 0, 0.5);
+            border: 1px solid #d8e0e8;
+            border-radius: 8px;
             outline: none;
+            color: #111827;
+            font-size: 14px;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+          }
+
+          .sidebar-contact input:focus,
+          .sidebar-contact textarea:focus {
+            border-color: #b90f00;
+            box-shadow: 0 0 0 3px rgba(185, 15, 0, 0.12);
           }
 
           .sidebar-contact h2 {
             margin: 0 0 20px;
             padding: 0;
+            color: #111827;
+            font-size: 26px;
+            font-weight: 800;
           }
 
           .sidebar-contact textarea {
-            height: 60px;
+            height: 92px;
             resize: none;
           }
 
           .sidebar-contact input[type="submit"] {
-            background: #00bcd4;
+            height: 46px;
+            margin-bottom: 0;
+            background: #b90f00;
             color: #fff;
             cursor: pointer;
             border: none;
-            font-size: 18px;
+            font-size: 15px;
+            font-weight: 700;
+            box-shadow: 0 10px 24px rgba(185, 15, 0, 0.22);
+            transition: background 0.25s ease, transform 0.25s ease;
+          }
+
+          .sidebar-contact input[type="submit"]:hover {
+            background: #901000;
+            transform: translateY(-1px);
           }
 
           .toggle {
             position: absolute;
-            height: 48px;
-            width: 48px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 52px;
+            width: 52px;
             cursor: pointer;
-            background: #f00;
-            top: 0;
-            right: -48px;
-            line-height: 48px;
-          }
-
-          .toggle:before {
-            content: "\f003";
-            font-family: fontAwesome;
-            font-size: 18px;
+            background: #b90f00;
+            top: 24px;
+            right: -52px;
             color: #fff;
+            border: 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 12px 28px rgba(185, 15, 0, 0.28);
+            transition: background 0.25s ease;
           }
 
-          .toggle.active:before {
-            content: "\f00d";
+          .toggle:hover,
+          .toggle.active {
+            background: #901000;
+          }
+
+          .toggle svg {
+            width: 22px;
+            height: 22px;
           }
 
           @media (max-width: 768px) {
@@ -159,18 +190,22 @@ const Inquiry = () => {
               width: 100%;
               height: 100%;
               left: -100%;
+              top: 0;
+              transform: none;
+              border-radius: 0;
             }
 
             .sidebar-contact .toggle {
               top: 50%;
               transform: translateY(-50%);
-              transition: 0.5s;
+              transition: top 0.35s ease, right 0.35s ease, transform 0.35s ease;
             }
 
             .sidebar-contact.active .toggle {
-              top: 0;
-              right: 0;
+              top: 18px;
+              right: 18px;
               transform: translateY(0);
+              border-radius: 10px;
             }
 
             .scroll {
@@ -186,10 +221,14 @@ const Inquiry = () => {
         `}
       </style>
       <div className={`sidebar-contact ${isActive ? "active" : ""}`}>
-        <div
+        <button
+          type="button"
+          aria-label={isActive ? "Close inquiry form" : "Open inquiry form"}
           className={`toggle ${isActive ? "active" : ""}`}
           onClick={toggleSidebar}
-        ></div>
+        >
+          {isActive ? <IoClose /> : <IoMailOutline />}
+        </button>
         <h2>Contact Us</h2>
         <div className="scroll">
           <form onSubmit={handleSubmit} ref={form}>
