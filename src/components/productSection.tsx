@@ -8,11 +8,18 @@ import Product from '@/styles/ProductsSection.module.css';
 const productCategories = [
     {
         category: 'Steel Products',
+        description:
+            'Advanced refractory and casting solutions for steel industries.',
 
         products: [
             {
                 name: 'Slide Gate Refractories',
                 image: '/valves.jpg',
+                link: '/gallery',
+            },
+            {
+                name: 'Tundish Boards',
+                image: '/Inverter-Scr.jpg',
                 link: '/gallery',
             },
             {
@@ -28,6 +35,15 @@ const productCategories = [
 
         products: [
             {
+                name: 'Tundish Boards',
+                image: '/Inverter-Scr.jpg',
+                link: '/gallery',
+            },
+            {
+                name: 'Slide Gate Refractories',
+                image: '/valves.jpg',
+                link: '/gallery',
+            },{
                 name: 'Casting Powder',
                 image: '/pedestal-bearing.jpg',
                 link: '/gallery',
@@ -64,61 +80,94 @@ export default function ProductsSection() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <section className={Product.productsSection}>
-            {/* LEFT SIDE CATEGORY TABS */}
+        <div>
+            <div className={Product.productsHeading}>
 
-            <div className={Product.leftPanel}>
+                <span className={Product.productTag}>
+                    OUR PRODUCTS
+                </span>
 
-                {productCategories.map((item, index) => (
+                <h2>
+                    Industrial Solutions Built
+                    For Modern Manufacturing
+                </h2>
 
-                    <button
-                        key={index}
-                        onClick={() => setActiveTab(index)}
-                        className={`${Product.categoryBtn} ${activeTab === index ? Product.activeCategory : ''
-                            }`}
-                    >
-                        {item.category}
-                    </button>
-
-                ))}
+                <p>
+                    High-performance furnace systems, induction
+                    solutions and industrial components engineered
+                    for reliability and efficiency.
+                </p>
 
             </div>
+            <section className={Product.productsSection}>
+                {/* LEFT SIDE CATEGORY TABS */}
 
-            {/* RIGHT SIDE PRODUCTS */}
+                <div className={Product.leftPanel}>
 
-            <div className={Product.rightPanel}>
+                    {productCategories.map((item, index) => (
 
-                <div className={Product.productsGrid}>
-
-                    {productCategories[activeTab].products.map((product, index) => (
-
-                        <Link
-                            href={product.link}
+                        <button
                             key={index}
-                            className={Product.productCard}
+                            onClick={() => setActiveTab(index)}
+                            className={`${Product.categoryBtn} ${activeTab === index ? Product.activeCategory : ''
+                                }`}
                         >
 
-                            <div className={Product.imageWrapper}>
-                                <img
-                                    src={product.image}
-                                    alt={product.name}
-                                    className={Product.productImage}
-                                />
-                            </div>
+                            <h4>{item.category}</h4>
 
-                            <div className={Product.cardContent}>
-                                <h3>{product.name}</h3>
-                            </div>
+                            <p>{item.description}</p>
 
-                        </Link>
+                        </button>
 
                     ))}
 
                 </div>
 
-            </div>
+                {/* RIGHT SIDE PRODUCTS */}
 
-        </section>
-         
+                <div className={Product.rightPanel}>
+
+                    <div className={Product.productsGrid}>
+
+                        {productCategories[activeTab].products.map((product, index) => (
+
+                            <Link
+                                href={product.link}
+                                key={index}
+                                className={Product.productCard}
+                            >
+
+                                <div className={Product.imageWrapper}>
+                                    <img
+                                        src={product.image}
+                                        alt={product.name}
+                                        className={Product.productImage}
+                                    />
+                                </div>
+
+                                <div className={Product.cardContent}>
+                                    <h3>{product.name}</h3>
+                                </div>
+
+                            </Link>
+
+                        ))}
+
+                    </div>
+                    <div className={Product.viewAllWrapper}>
+
+                        <Link
+                            href="/gallery"
+                            className={Product.viewAllBtn}
+                        >
+                            View All Products
+                        </Link>
+
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
     );
 }

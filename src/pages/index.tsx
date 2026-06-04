@@ -5,7 +5,6 @@ import Services from "@/components/services";
 import AboutUs from "@/components/aboutus";
 import { EmblaOptionsType } from "embla-carousel";
 import ThumbnailCarousel from "@/components/thumbnailcarousal";
-import Inquiry from "@/components/contactForm";
 import ImageCarousal from "@/components/imagecarousal";
 import SectionTab from "@/components/sectionTabs";
 import Head from "next/head";
@@ -15,6 +14,7 @@ const OPTIONS2: EmblaOptionsType = {}
 const SLIDE_COUNT2 = 10
 const SLIDES2 = Array.from(Array(SLIDE_COUNT2).keys())
 export default function Home() {
+
   const handleCardClick = () => {
     alert('Button clicked inside the card!');
   };
@@ -33,7 +33,6 @@ export default function Home() {
       <SectionTab />
       <ProductsSection />
       <ImageGallery />
-      <Inquiry />
       {/* <Slider /> */}
       <Owner />
     </>);
