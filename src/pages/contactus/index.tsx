@@ -285,10 +285,10 @@ const ContactFooorm: React.FC = () => {
                     </div>
 
                     <div className="col-md-5 pe-0">
-                      <Image src="/AboutCompany.jpeg" alt=" Error Message" width={0}
+                      <Image src="/melter.png" alt=" Error Message" width={0}
                         height={0}
                         sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
+                        style={{ width: '100%', height: '70vh' }}
                       />
                       {/* <img src="fullspice.webp" alt="Full Spices " className="imgfluidimg" /> */}
                     </div>

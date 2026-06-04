@@ -1,5 +1,4 @@
 import NextJsCarousel from "@/components/carousel";
-import Parallax from "@/components/parallax";
 import Slider from "@/components/slider";
 import Owner from "@/components/owner";
 import Services from "@/components/services";
@@ -8,8 +7,10 @@ import { EmblaOptionsType } from "embla-carousel";
 import ThumbnailCarousel from "@/components/thumbnailcarousal";
 import Inquiry from "@/components/contactForm";
 import ImageCarousal from "@/components/imagecarousal";
+import SectionTab from "@/components/sectionTabs";
 import Head from "next/head";
 import ImageGallery from "@/components/imagegallery";
+import ProductsSection from '@/components/productSection';
 const OPTIONS2: EmblaOptionsType = {}
 const SLIDE_COUNT2 = 10
 const SLIDES2 = Array.from(Array(SLIDE_COUNT2).keys())
@@ -25,16 +26,15 @@ export default function Home() {
       </Head>
       <NextJsCarousel />
       <AboutUs />
-      
-      {/* without name slider is with name */}
+      {/* without name Image Carousal blank time - 18 sec  && slider is with name blank time 30 sec */}
       <ImageCarousal />
-      <ThumbnailCarousel slides={SLIDES2} options={OPTIONS2} />
+      {/* <ThumbnailCarousel slides={SLIDES2} options={OPTIONS2} /> */}
       <Services />
-      
+      <SectionTab />
+      <ProductsSection />
       <ImageGallery />
-      <Parallax />
       <Inquiry />
-      <Slider />
+      {/* <Slider /> */}
       <Owner />
     </>);
 }

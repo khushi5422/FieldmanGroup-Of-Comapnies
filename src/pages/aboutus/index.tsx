@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import about from "@/styles/About.module.css";
 import { Container } from "react-bootstrap";
+import Parallax from "@/components/parallax";
 import Head from "next/head";
 
 export default function Aboutus() {
@@ -11,6 +12,7 @@ export default function Aboutus() {
         <meta name="description" content="Experience the global allure of J K Exports." />
       </Head>
       <Container className={`${about.desktop_content}`}>
+        <Parallax />
         <div className={`${about.around} row mt-5 `}>
           <div
             className={`${about.box} col-6 `}
@@ -35,6 +37,7 @@ export default function Aboutus() {
             </div>
           </div>
         </div>
+
         <div className={`${about.around} row mt-5 `}>
           <div
             className={`${about.widd} p-2 col-6 `}
@@ -56,6 +59,31 @@ export default function Aboutus() {
             style={{ backgroundImage: `url('valves.jpg')` }}></div>
         </div>
 
+ <div className={`${about.around} row mt-5 `}>
+          <div
+            className={`${about.box} col-6 `}
+            data-aos="zoom-in-left"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+            data-aos-once="true"
+            style={{ backgroundImage: `url('heater.jpg')` }}></div>
+          <div
+            className={`${about.widd} p-1 col-6 `}
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+            data-aos-once="true">
+            <h1>Industrial Steel Plant Consumables</h1>
+            <div className={`${about.grey}`}>
+              We, Fieldman Induction came into existence in the year 2014 as a prominent manufacturer, supplier and exporter of induction
+              furnace such as Induction Coil, Furnace & Coil Insulation Products Though we initially started our journey around 11 years
+              back as M/S FIELDMAN CONTROL SYSTEM. Since then we have achieved a very reputed name in this industry of Automation.
+              All our manufactured range is having superior quality which has enabled us to associate ourselves with some of the leading Brands
+              like Autonics, FLUKE, Mitsubishi, Omron, Honeywell, Delta and many more under one roof.
+            </div>
+          </div>
+        </div>
+        
       </Container>
       {/* <Container className={`${about.mobile_content}`}>
         <div className={`${about.around} row mt-5 `}>

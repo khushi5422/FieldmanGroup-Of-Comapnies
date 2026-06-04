@@ -1,6 +1,9 @@
 .mobile_content {
   display: none;
 }
+.desktop_content{
+  overflow: visible;
+}
 @media (max-width: 767px) {
   .desktop_content {
     display: none;
