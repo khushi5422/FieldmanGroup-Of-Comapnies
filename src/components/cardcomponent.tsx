@@ -1,20 +1,84 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+'use client';
 
-function BasicExample() {
-  return (
-    <Card className="" style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="frp-washers.jpg/" />
-      <Card.Body>
-        <Card.Title>Furnace Stanchion Assembly</Card.Title>
-        <Card.Text>
-          We offer Magnetic Yoke/ shunt for Steel shall induction furnace with highest 15MT capacity of furnace.
-          We are having in-house manufacturing capacity for all induction furnace spare parts.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-  );
+import Link from 'next/link';
+import styles from '@/styles/Cardcomponent.module.css';
+
+interface CardItem {
+  image: string;
+  title: string;
+  enquiryLink: string;
+  viewLink: string;
 }
 
-export default BasicExample;
+const cardData: CardItem[] = [
+  {
+    image: '/bearing.webp',
+    title: 'Slide Gate Refractories',
+    enquiryLink: '/contact',
+    viewLink: '/gallery',
+  },
+
+  {
+    image: '/f1.jpg',
+    title: 'Casting Powder',
+    enquiryLink: '/contact',
+    viewLink: '/gallery',
+  },
+
+  {
+    image: '/pedestal-bearing.jpg',
+    title: 'Tundish Boards',
+    enquiryLink: '/contact',
+    viewLink: '/gallery',
+  },
+];
+
+export default function ProductCards() {
+  return (
+    <div className={styles.cardsWrapper}>
+
+      {cardData.map((card, index) => (
+        <div key={index} className={styles.card}>
+
+          {/* IMAGE */}
+          <div className={styles.imageWrapper}>
+            <img
+              src={card.image}
+              alt={card.title}
+              className={styles.cardImage}
+            />
+          </div>
+
+          {/* CONTENT */}
+          <div className={styles.cardContent}>
+
+            <h3 className={styles.cardTitle}>
+              {card.title}
+            </h3>
+
+            <div className={styles.buttonGroup}>
+
+              <Link
+                href={card.enquiryLink}
+                className={styles.primaryBtn}
+              >
+                Enquiry Now
+              </Link>
+
+              <Link
+                href={card.viewLink}
+                className={styles.secondaryBtn}
+              >
+                View More
+              </Link>
+
+            </div>
+
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+  );
+}
