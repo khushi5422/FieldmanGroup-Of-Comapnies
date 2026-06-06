@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Image from 'next/image';
-import styles from "@/styles/home/Strength.module.css";
+import styles from "@/styles/home/strength.module.css";
 export default function STRENGTH() {
     return (
         <section className={styles.servicesSection}>

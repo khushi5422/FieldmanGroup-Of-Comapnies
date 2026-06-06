@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import styles from "@/styles/home/owner.module.css";
+import styles from "@/styles/home/Owner.module.css";
 import Image from 'next/image';
 
 
